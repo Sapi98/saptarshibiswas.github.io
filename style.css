@@ -1377,3 +1377,16 @@ body[data-theme="dark"] .credential-card:hover {
 .service-card ol li::marker {
   font-weight: 900;
 }
+
+/* Make all expandable-card + / − icons consistently oval */
+
+.expand-card .accordion-icon {
+  width: 46px;
+  min-width: 46px;
+  max-width: 46px;
+  height: 38px;
+  min-height: 38px;
+  max-height: 38px;
+  border-radius: 999px;
+  flex: 0 0 46px;
+}
