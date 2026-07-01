@@ -1390,3 +1390,14 @@ body[data-theme="dark"] .credential-card:hover {
   border-radius: 999px;
   flex: 0 0 46px;
 }
+
+/* Emphasize my name in publication author lists */
+
+.pub-authors strong {
+  font-weight: 900;
+  color: var(--text);
+}
+
+.publication-card:hover .pub-authors strong {
+  color: #fffaf0;
+}
