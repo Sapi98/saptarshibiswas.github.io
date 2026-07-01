@@ -70,22 +70,26 @@ function updateTimelineProgress() {
       window.innerHeight || document.documentElement.clientHeight;
 
     /*
-      This controls the moving line length.
-      Keep this synced with the CSS:
-      .timeline-modern::after {
-        top: 10px;
-        max-height: calc(100% - 20px);
-      }
+      The progress line now follows a fixed visual point on the screen.
+      This makes the timeline movement feel synced with scrolling instead
+      of advancing too quickly.
     */
+    const screenMarkerY = viewportHeight * 0.50;
+
     const lineTopOffset = 10;
     const lineBottomOffset = 10;
-    const lineMaxHeight = timeline.offsetHeight - lineTopOffset - lineBottomOffset;
+    const lineMaxHeight =
+      timeline.offsetHeight - lineTopOffset - lineBottomOffset;
 
-    const start = viewportHeight * 0.70;
-    const end = viewportHeight * 0.30;
+    /*
+      Convert the screen marker into a position inside the timeline.
+      If the marker is above the timeline, progress is 0.
+      If the marker is below the timeline, progress is 100%.
+    */
+    let lineEndY = screenMarkerY - rect.top - lineTopOffset;
+    lineEndY = Math.max(0, Math.min(lineMaxHeight, lineEndY));
 
-    let progress = (start - rect.top) / (rect.height - (start - end));
-    progress = Math.max(0, Math.min(1, progress));
+    const progress = lineMaxHeight > 0 ? lineEndY / lineMaxHeight : 0;
 
     timeline.style.setProperty(
       "--timeline-progress",
@@ -93,11 +97,10 @@ function updateTimelineProgress() {
     );
 
     /*
-      Convert the visual line progress into an actual Y-position
-      inside the timeline container.
+      Highlight the most recent bullet that the progress line has reached.
+      Scrolling down: bullet activates when the line passes it.
+      Scrolling up: bullet deactivates when the line rolls back above it.
     */
-    const lineEndY = lineTopOffset + progress * lineMaxHeight;
-
     let activeEntry = null;
 
     timeline.querySelectorAll(".timeline-entry").forEach(entry => {
@@ -106,17 +109,9 @@ function updateTimelineProgress() {
       if (!node) return;
 
       const nodeRect = node.getBoundingClientRect();
-
-      /*
-        Bullet center relative to the top of the timeline container.
-      */
       const nodeCenterY =
-        nodeRect.top - rect.top + nodeRect.height / 2;
+        nodeRect.top - rect.top + nodeRect.height / 2 - lineTopOffset;
 
-      /*
-        The active bullet is the latest bullet that the progress line
-        has reached or passed.
-      */
       if (lineEndY >= nodeCenterY) {
         activeEntry = entry;
       }
