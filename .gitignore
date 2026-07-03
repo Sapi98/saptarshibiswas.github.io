@@ -8,3 +8,7 @@
 
 # zip archives
 *.zip
+
+# Documents
+*.docx
+*.doc
