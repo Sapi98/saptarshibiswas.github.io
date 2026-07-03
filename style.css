@@ -1590,3 +1590,51 @@ body[data-theme="dark"] .credential-card:hover {
 .site-footer:not(.home-footer) .footer-link:nth-child(3) {
   order: 5; /* ResearchGate */
 }
+
+/* Degree expanded-detail layout */
+
+.degree-detail-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.degree-detail-block {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--tile);
+}
+
+.degree-detail-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.degree-detail-block h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  color: var(--text);
+}
+
+.degree-detail-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.degree-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.disabled-link {
+  pointer-events: none;
+  opacity: .65;
+}
