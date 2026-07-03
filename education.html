@@ -10,6 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
   </head>
   <body>
     <header class="site-header">
@@ -83,16 +98,25 @@
                 </span>
               </button>
               <div class="expand-details">
-                <div>
-                  <ul class="clean-list">
-                    <li>
-                      Final-year project / thesis placeholder: add abstract, technical scope, methodology, and outcomes here.
-                    </li>
-                    <li>
-                      Suggested details: meta-heuristics, VLSI routing, extended nucleic acid memory, Varibox encryption, datasets/tools, results, and publication links.
-                    </li>
-                  </ul>
-                </div>
+                  <div class="degree-detail-panel">
+                    <div class="degree-detail-block">
+                      <span class="degree-detail-label">Capstone Project Title</span>
+                      <h4>Rectilinear Minimal Steiner Tree Problem: Solving through Pigeon Inspired Optimization</h4>
+                    </div>
+
+                    <div class="degree-detail-block">
+                      <span class="degree-detail-label">Abstract</span>
+                      <p>
+                        With the rapid advances in Very large scale integration (VLSI) technology, it is important to optimize the wire length of the circuits so that the performance of the circuits can be enhanced. Routing is one of the most important stages in the physical layer design of VLSI circuits. The VLSI Global Routing problem aims to minimize the total interconnection length by mapping it to the Rectilinear Steiner Minimal Tree (RSMT) Problem which finds a set of additional points, called Steiner points, such that the length of a rectilinear minimum spanning tree constructed with n terminal points is minimized. The terminal points are nothing but various active and passive components in the VLSI circuits. A heuristic approach is used in optimizing using the Pigeon Inspired Optimization (PIO), which has the potential to solve the RSMT problem. Complexity analysis and simulation results were compared with the conventional Particle Swarm Optimization (PSO) algorithm. A comparative study has been done on both the versions and the Pigeon Inspired Optimization (PIO) has been found to be better in optimizing the wire lengths.
+                      </p>
+                    </div>
+
+                    <div class="degree-detail-actions">
+                      <a class="btn btn-small btn-soft" href="BTech_project_report.pdf" target="_blank" rel="noopener">
+                        View Project Report →
+                      </a>
+                    </div>
+                  </div>
               </div>
             </div>
           </article>
@@ -120,18 +144,42 @@
                 </span>
               </button>
               <div class="expand-details">
-                <div>
-                  <ul class="clean-list">
-                    <li>
-                      Thesis: Oracle Pointer Machines.
-                    </li>
-                    <li>
-                      Placeholder for thesis abstract: add central problem, formal model, results, and implications.
-                    </li>
-                    <li>
-                      Courses: Theory of Computation, Machine Learning, Design and Analysis of Algorithm, Fundamentals of Quantum Computing, Quantum Information and Complex, Molecular Programming, Analysis I, Real Analysis I, Numerical Analysis I.
-                    </li>
-                  </ul>
+                <div class="degree-detail-panel">
+                  <div class="degree-detail-block">
+                    <span class="degree-detail-label">M.S. Thesis Title</span>
+                    <h4>Oracle Pointer Machines</h4>
+                  </div>
+
+                  <div class="degree-detail-block">
+                    <span class="degree-detail-label">Abstract</span>
+                    <p>
+                      Multiplying two n-bit integers using the Schönhage-Strassen algorithm requires a Turing
+machine to perform \(O(n log(n)log(log(n)))\) operations. In 1980, Schönhage demonstrated that a
+Storage Modifcation Machine (SMM) could signifcantly reduce the number of operations
+required to multiply two integers of n bits to \(O(n)\). Moreover, it was established that the SMM
+could simulate the Turing machine in real-time. In the domain of computational processes
+incorporating Oracle machines, Turing machines encounter a bottleneck in computation due to
+the time demands associated with formulating queries to an Oracle and interpreting its results.
+Prolonged queries and responses inherently require extended processing time by the Turing
+machine. This study introduces the concept of Oracle pointer machines, focusing on Oracle
+storage modifcation machines that reduce computational time for Oracle machines and overcome
+existing bottlenecks. The study expands on the efciency of SMMs and the novel construction of
+Oracle SMMs by applying them to recursive function theory, specifcally focusing on the
+complexity of computing real functions. The complexity analysis of computing real functions
+within a bounded domain using Oracle SMMs builds upon the work of Ko and Friedman
+published in 1982. Their paper established an upper bound for computing real functions with a
+modulus of continuity \(m(n)\) using an Oracle Turing Machine, which was \(O(n) + O(m(n + 1))\),
+where n denotes the precision parameter. This thesis explores the use of Oracle SMMs in this
+context, leading to an improvement in the bound to \(O(n) + O(⌈log m(n)⌉)\) when Oracle SMMs are
+utilized instead.
+                    </p>
+                  </div>
+
+                  <div class="degree-detail-actions">
+                    <a class="btn btn-small btn-soft" href="https://www.proquest.com/docview/3225638753" target="_blank" rel="noopener">
+                      View Thesis / Report →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,15 +208,24 @@
                 </span>
               </button>
               <div class="expand-details">
-                <div>
-                  <ul class="clean-list">
-                    <li>
-                      Dissertation/project abstract placeholder.
-                    </li>
-                    <li>
-                      Relevant areas: computability, complexity, analog computing, CRNs, Oracle Pointer Machines, molecular programming, and quantum information science.
-                    </li>
-                  </ul>
+                <div class="degree-detail-panel">
+                  <div class="degree-detail-block">
+                    <span class="degree-detail-label">Dissertation Direction</span>
+                    <h4>Computability and Complexity of Real Functions, Analog Computing, and Molecular Programming</h4>
+                  </div>
+
+                  <div class="degree-detail-block">
+                    <span class="degree-detail-label">Research Summary</span>
+                    <p>
+                      Work Under Progress
+                    </p>
+                  </div>
+
+                  <div class="degree-detail-actions">
+                    <a class="btn btn-small btn-soft disabled-link" href="#" aria-disabled="true">
+                      Dissertation in Progress
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
