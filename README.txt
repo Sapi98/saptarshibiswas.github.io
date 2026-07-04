@@ -1,4 +1,6 @@
-Saptarshi Biswas academic website — v19, v13-style final
+Sapi98.github.io
+
+Saptarshi Biswas's academic website — v19, v13-style final
 
 This package uses Version 13 visual styling as the baseline and includes:
 - Research Summary homepage heading.
