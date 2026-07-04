@@ -2,6 +2,7 @@
 # Ignore any cache folders anywhere in the repo
 **/cache/
 **/cache/**
+.vscode/
 
 # macOS Finder metadata
 .DS_Store
