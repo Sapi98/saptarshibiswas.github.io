@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://Sapi98.github.io/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://Sapi98.github.io/research.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://Sapi98.github.io/teaching.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://Sapi98.github.io/experience.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://Sapi98.github.io/education.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://Sapi98.github.io/service.html</loc>
+    <priority>0.70</priority>
+  </url>
+</urlset>
