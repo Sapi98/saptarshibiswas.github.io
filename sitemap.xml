@@ -29,4 +29,9 @@
     <loc>https://Sapi98.github.io/service.html</loc>
     <priority>0.70</priority>
   </url>
+
+  <url>
+    <loc>https://Sapi98.github.io/people.html</loc>
+    <priority>0.70</priority>
+  </url>
 </urlset>
