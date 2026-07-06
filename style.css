@@ -1274,20 +1274,6 @@ body[data-theme="dark"] .credential-card:hover {
   box-shadow: inset 0 0 0 1px rgba(255, 250, 240, .45);
 }
 
-/* Footer hover fix for Google Scholar and ResearchGate icons only.
-   Footer order:
-   1 = Email
-   2 = Google Scholar
-   3 = ResearchGate
-*/
-
-.site-footer:not(.home-footer) .footer-link:nth-child(2):hover .footer-icon,
-.site-footer:not(.home-footer) .footer-link:nth-child(3):hover .footer-icon {
-  background: #fffaf0;
-  color: inherit;
-  box-shadow: inset 0 0 0 1px rgba(255, 250, 240, .45);
-}
-
 /* Better handling for long timeline dates like Decision Scientist Intern */
 
 .timeline-date {
