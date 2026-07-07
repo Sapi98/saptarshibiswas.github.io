@@ -125,3 +125,53 @@ function updateTimelineProgress() {
 
 window.addEventListener("scroll", updateTimelineProgress, { passive: true });
 window.addEventListener("resize", updateTimelineProgress);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const line1 = document.getElementById("typingLine1");
+  const line2 = document.getElementById("typingLine2");
+
+  if (!line1 || !line2) return;
+
+  const text1 = "Hello, I'm";
+  const text2 = "Saptarshi";
+
+  let i = 0;
+
+  line1.classList.add("typing-cursor");
+
+  function typeFirstLine() {
+    if (i < text1.length) {
+      line1.textContent += text1.charAt(i);
+      i++;
+      setTimeout(typeFirstLine, 65);
+    } else {
+      line1.classList.remove("typing-cursor");
+
+      line2.classList.add("typing-cursor");
+
+      let j = 0;
+
+      function typeSecondLine() {
+        if (j < text2.length) {
+          line2.textContent += text2.charAt(j);
+          j++;
+          setTimeout(typeSecondLine, 90);
+        } else {
+          line2.classList.remove("typing-cursor");
+
+          const introContent =
+            document.getElementById("introContent");
+
+          if (introContent) {
+            introContent.classList.add("visible");
+          }
+        }
+      }
+
+      setTimeout(typeSecondLine, 250);
+    }
+  }
+
+  typeFirstLine();
+});
