@@ -126,40 +126,6 @@ function updateTimelineProgress() {
 window.addEventListener("scroll", updateTimelineProgress, { passive: true });
 window.addEventListener("resize", updateTimelineProgress);
 
-// const line = document.querySelector(".typing-line");
-// const name = document.querySelector(".typing-name");
-
-// if (line && name) {
-//   const text1 = "Hey there, I'm";
-//   const text2 = "Saptarshi";
-
-//   line.textContent = "";
-//   name.textContent = "";
-
-//   let i = 0;
-
-//   function typeLine() {
-//     if (i < text1.length) {
-//       line.textContent += text1.charAt(i);
-//       i++;
-//       setTimeout(typeLine, 70);
-//     } else {
-//       let j = 0;
-
-//       function typeName() {
-//         if (j < text2.length) {
-//           name.textContent += text2.charAt(j);
-//           j++;
-//           setTimeout(typeName, 90);
-//         }
-//       }
-
-//       setTimeout(typeName, 200);
-//     }
-//   }
-
-//   typeLine();
-// }
 
 document.addEventListener("DOMContentLoaded", () => {
   const line1 = document.getElementById("typingLine1");
@@ -167,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!line1 || !line2) return;
 
-  const text1 = "Hey there, I'm";
+  const text1 = "Hello, I'm";
   const text2 = "Saptarshi";
 
   let i = 0;
@@ -191,6 +157,15 @@ document.addEventListener("DOMContentLoaded", () => {
           line2.textContent += text2.charAt(j);
           j++;
           setTimeout(typeSecondLine, 90);
+        } else {
+          line2.classList.remove("typing-cursor");
+
+          const introContent =
+            document.getElementById("introContent");
+
+          if (introContent) {
+            introContent.classList.add("visible");
+          }
         }
       }
 
