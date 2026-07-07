@@ -158,8 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
           j++;
           setTimeout(typeSecondLine, 90);
         } else {
-          line2.classList.remove("typing-cursor");
-
+          
           const introContent =
             document.getElementById("introContent");
 
