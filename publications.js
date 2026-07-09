@@ -9,16 +9,16 @@ const publications = [
     "link": "https://doi.org/10.5772/intechopen.103075",
     "bibtex": "@incollection{biswasdeeplearningalgorithmsfo2022,\n  title={Deep Learning Algorithms for Efficient Analysis of ECG Signals to Detect Heart Disorders},\n  author={S. Dey, R. Pal, S. Biswas},\n  year={2022}\n}"
   },
-  {
-    "type": "journal",
-    "typeLabel": "Journal Papers",
-    "year": 2026,
-    "title": "MagnoCluster: Physics-Informed Unsupervised Learning Framework for Material Classification",
-    "authors": "S. Biswas, A. Biswas, Y. Mudryk, P. Singh",
-    "venue": "Communicated",
-    "link": "#",
-    "bibtex": "@article{biswasmagnoclusterphysicsinfor2026,\n  title={MagnoCluster: Physics-Informed Unsupervised Learning Framework for Material Classification},\n  author={S. Biswas, A. Biswas, Y. Mudryk, P. Singh},\n  year={2026}\n}"
-  },
+  // {
+  //   "type": "journal",
+  //   "typeLabel": "Journal Papers",
+  //   "year": 2026,
+  //   "title": "MagnoCluster: Physics-Informed Unsupervised Learning Framework for Material Classification",
+  //   "authors": "S. Biswas, A. Biswas, Y. Mudryk, P. Singh",
+  //   "venue": "Communicated",
+  //   "link": "#",
+  //   "bibtex": "@article{biswasmagnoclusterphysicsinfor2026,\n  title={MagnoCluster: Physics-Informed Unsupervised Learning Framework for Material Classification},\n  author={S. Biswas, A. Biswas, Y. Mudryk, P. Singh},\n  year={2026}\n}"
+  // },
   {
     "type": "journal",
     "typeLabel": "Journal Papers",
