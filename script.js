@@ -133,8 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!line1 || !line2) return;
 
-  const text1 = "Hello, I'm";
-  const text2 = "Saptarshi";
+  const text1 = "Welcome!";
+  const text2 = "About Saptarshi";
 
   let i = 0;
 
