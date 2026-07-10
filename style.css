@@ -2079,3 +2079,253 @@ body[data-theme="dark"] .person-links a:hover {
   box-shadow:
     0 10px 24px rgba(0, 0, 0, .20);
 }
+
+/* Profile card name size */
+
+.profile-card h2 {
+  font-size: clamp(1.5rem, 2.1vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  margin-bottom: 10px;
+}
+
+/* Profile-card contact/profile buttons: content-sized buttons */
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 22px;
+}
+
+/* Each button sizes relative to its content */
+
+.profile-link {
+  width: auto;
+  min-width: max-content;
+  min-height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border-radius: 999px;
+  border: 1px solid var(--line);
+
+  background: var(--surface);
+  color: var(--text);
+
+  text-decoration: none;
+
+  font-size: .76rem;
+  font-weight: 800;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    background-color .45s ease,
+    color .45s ease,
+    border-color .45s ease,
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.profile-link-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+
+  display: inline-grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: .66rem;
+  font-weight: 900;
+  line-height: 1;
+
+  transition:
+    background-color .45s ease,
+    color .45s ease,
+    transform .35s ease;
+}
+
+.profile-link-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Brand-inspired icon colors */
+
+.email-icon {
+  background: #47423c;
+}
+
+.scholar-icon {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
+.orcid-icon {
+  background: #a6ce39;
+  color: #ffffff;
+}
+
+.researchgate-icon {
+  background: #00ccbb;
+  color: #ffffff;
+}
+
+.github-icon {
+  background: #24292f;
+  color: #ffffff;
+}
+
+.linkedin-icon {
+  background: #0a66c2;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+}
+
+/* Hover behavior */
+
+.profile-link:hover {
+  background: #47423c;
+  color: #fffaf0;
+  border-color: #47423c;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(52, 49, 45, .20);
+}
+
+.profile-link:hover .profile-link-icon {
+  background: #fffaf0;
+  color: #47423c;
+
+  transform: scale(1.08);
+}
+
+/* Keep ORCID readable on hover */
+
+.profile-link:hover .orcid-icon {
+  background: #fffaf0;
+  color: #6d8f00;
+}
+
+/* Dark mode */
+
+body[data-theme="dark"] .profile-link {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+body[data-theme="dark"] .profile-link:hover {
+  background: #e4c28a;
+  color: #242321;
+  border-color: #e4c28a;
+}
+
+body[data-theme="dark"] .profile-link:hover .profile-link-icon {
+  background: #242321;
+  color: #fffaf0;
+}
+
+/* Small screens */
+
+@media (max-width: 520px) {
+  .profile-links {
+    justify-content: center;
+  }
+
+  .profile-link {
+    font-size: .74rem;
+    padding: 8px 10px;
+  }
+}
+/* Profile card links: content-sized buttons, arranged as 2 rows x 3 columns */
+
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  align-items: center;
+
+  column-gap: 6px;
+  row-gap: 8px;
+
+  /* gives the button area a little more lateral room inside the card */
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: 22px;
+}
+
+.profile-link {
+  width: auto !important;
+  min-width: max-content;
+  min-height: 36px;
+
+  padding: 7px 9px;
+
+  gap: 6px;
+
+  font-size: .72rem;
+  white-space: nowrap;
+}
+
+.profile-link-icon {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+
+  font-size: .62rem;
+}
+
+/* On very small screens, allow natural wrapping again */
+@media (max-width: 520px) {
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Homepage footer credit */
+
+.home-footer .footer-credit {
+  color: var(--muted);
+
+  font-size: .86rem;
+  font-weight: 700;
+
+  text-align: right;
+  line-height: 1.45;
+
+  max-width: 380px;
+}
+
+body[data-theme="dark"] .home-footer .footer-credit {
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .home-footer .footer-credit {
+    text-align: left;
+    max-width: 100%;
+  }
+}
