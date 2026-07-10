@@ -2065,3 +2065,17 @@ body[data-theme="dark"] .person-links a:hover {
 .hero.section {
   padding-top: 12px;
 }
+
+/* Publication action buttons: only change hover shade, keep normal state unchanged */
+
+.publication-card .pub-actions .btn:hover,
+.publication-card:hover .pub-actions .btn:hover {
+  background: #6a6054 !important;
+  border-color: #8a7a68 !important;
+  color: #fffaf0 !important;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, .20);
+}
