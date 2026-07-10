@@ -2307,25 +2307,45 @@ body[data-theme="dark"] .profile-link:hover .profile-link-icon {
 
 /* Homepage footer credit */
 
+.home-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.home-footer > div:first-child {
+  min-width: 0;
+}
+
 .home-footer .footer-credit {
-  color: var(--muted);
-
-  font-size: .86rem;
-  font-weight: 700;
-
-  text-align: right;
-  line-height: 1.45;
+  justify-self: end;
 
   max-width: 380px;
+
+  color: var(--muted);
+
+  font-size: .84rem;
+  font-weight: 700;
+  line-height: 1.45;
+
+  text-align: right;
 }
 
-body[data-theme="dark"] .home-footer .footer-credit {
-  color: var(--muted);
-}
+/* Mobile / narrow screens */
 
 @media (max-width: 900px) {
+  .home-footer {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+    align-items: flex-start;
+  }
+
   .home-footer .footer-credit {
-    text-align: left;
+    justify-self: start;
+
     max-width: 100%;
+
+    text-align: left;
   }
 }
