@@ -991,63 +991,6 @@ h3 {
   color: #fffaf0;
 }
 
-.site-footer {
-  max-width: var(--max);
-  margin: 40px auto 24px;
-  padding: 26px 22px;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-.footer-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 800;
-  background: var(--surface);
-  transition:
-    background-color .5s ease,
-    color .5s ease,
-    transform .35s ease;
-}
-
-.footer-link:hover {
-  background: #47423c;
-  color: #fffaf0;
-}
-
-.footer-link:hover .footer-icon {
-  background: rgba(255, 250, 240, .18);
-  color: #fffaf0;
-}
-
-.footer-icon {
-  width: 22px;
-  height: 22px;
-  min-width: 22px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--surface-2);
-  font-size: .78rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1205,16 +1148,6 @@ body[data-theme="dark"] .credential-card:hover {
     grid-column: 2;
   }
 
-  .site-footer {
-    flex-direction: column;
-    margin-left: 22px;
-    margin-right: 22px;
-  }
-
-  .footer-links {
-    justify-content: flex-start;
-  }
-
   .two-col-list {
     columns: 1;
   }
@@ -1266,20 +1199,6 @@ body[data-theme="dark"] .credential-card:hover {
     width: 102px;
     height: 102px;
   }
-}
-
-/* Footer hover fix for Google Scholar and ResearchGate icons only.
-   Footer order:
-   1 = Email
-   2 = Google Scholar
-   3 = ResearchGate
-*/
-
-.site-footer:not(.home-footer) .footer-link:nth-child(2):hover .footer-icon,
-.site-footer:not(.home-footer) .footer-link:nth-child(3):hover .footer-icon {
-  background: #fffaf0;
-  color: inherit;
-  box-shadow: inset 0 0 0 1px rgba(255, 250, 240, .45);
 }
 
 /* Better handling for long timeline dates like Decision Scientist Intern */
@@ -1420,169 +1339,6 @@ body[data-theme="dark"] .credential-card:hover {
 .profile-initials {
   width: 140px;
   height: 140px;
-}
-
-/* Footer final correction:
-   - More room for footer text
-   - Less horizontal padding
-   - Footer buttons keep natural width
-   - Buttons center-align with equal gaps
-   - Other pages should stay within 2 rows
-   - Index footer Email uses same button/icon height as other pages
-*/
-
-.site-footer {
-  display: grid;
-  grid-template-columns: minmax(560px, 1fr) minmax(460px, 500px);
-  column-gap: 14px;
-  align-items: center;
-  padding-left: 14px;
-  padding-right: 14px;
-}
-
-/* Text area */
-.site-footer > div:first-child {
-  min-width: 0;
-}
-
-.site-footer > div:first-child p {
-  max-width: none;
-  margin-bottom: 0;
-}
-
-/* Non-home pages: natural button widths, centered, equal spacing */
-.site-footer:not(.home-footer) .footer-links {
-  width: 100%;
-  max-width: 500px;
-  display: flex !important;
-  flex-wrap: wrap;
-  justify-content: center !important;
-  align-items: center;
-  gap: 12px 14px;
-}
-
-/* Homepage has only one Email button */
-.home-footer .footer-links {
-  width: auto;
-  max-width: none;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center;
-  gap: 12px 14px;
-}
-
-/* Footer buttons: natural width, slightly taller */
-.site-footer .footer-link {
-  width: auto !important;
-  min-height: 44px !important;
-  padding: 10px 12px !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  white-space: nowrap;
-  line-height: 1;
-  grid-column: auto !important;
-}
-
-/* Remove any old forced grid placements */
-.site-footer .footer-link:nth-child(4),
-.site-footer .footer-link:nth-child(5) {
-  grid-column: auto !important;
-}
-
-/* Same icon size everywhere, including index.html */
-.site-footer .footer-icon,
-.home-footer .footer-icon {
-  width: 22px !important;
-  height: 22px !important;
-  min-width: 22px !important;
-  max-width: 22px !important;
-  min-height: 22px !important;
-  max-height: 22px !important;
-  font-size: .78rem !important;
-  line-height: 1 !important;
-  display: inline-grid !important;
-  place-items: center !important;
-  transform: none !important;
-}
-
-/* Medium screens: allow footer to stack before it squeezes */
-@media (max-width: 1080px) {
-  .site-footer {
-    grid-template-columns: 1fr;
-    row-gap: 18px;
-    align-items: flex-start;
-  }
-
-  .site-footer:not(.home-footer) .footer-links,
-  .home-footer .footer-links {
-    max-width: 100%;
-    justify-content: flex-start !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 520px) {
-  .site-footer {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .site-footer:not(.home-footer) .footer-links {
-    justify-content: flex-start !important;
-  }
-}
-
-/* Move footer button group more to the right on non-home pages */
-
-.site-footer:not(.home-footer) .footer-links {
-  margin-left: auto !important;
-  margin-right: -4px !important;
-  justify-content: flex-end !important;
-}
-
-/* Give the footer text enough room while allowing buttons to sit right */
-.site-footer {
-  column-gap: 8px !important;
-  padding-right: 12px !important;
-}
-
-/* Move footer button group further right on all pages, including index.html */
-
-.site-footer .footer-links {
-  margin-left: auto !important;
-  margin-right: -8px !important;
-  justify-content: flex-end !important;
-}
-
-/* Reduce footer right padding slightly so the button group sits closer to edge */
-.site-footer {
-  column-gap: 8px !important;
-  padding-right: 8px !important;
-}
-
-/* Reorder non-home footer icons:
-   Email, GitHub, LinkedIn, Google Scholar, ResearchGate
-   Index/home footer is unaffected because it has only Email.
-*/
-
-.site-footer:not(.home-footer) .footer-link:nth-child(1) {
-  order: 1; /* Email */
-}
-
-.site-footer:not(.home-footer) .footer-link:nth-child(4) {
-  order: 2; /* GitHub */
-}
-
-.site-footer:not(.home-footer) .footer-link:nth-child(5) {
-  order: 3; /* LinkedIn */
-}
-
-.site-footer:not(.home-footer) .footer-link:nth-child(2) {
-  order: 4; /* Google Scholar */
-}
-
-.site-footer:not(.home-footer) .footer-link:nth-child(3) {
-  order: 5; /* ResearchGate */
 }
 
 /* Degree expanded-detail layout */
@@ -2347,5 +2103,247 @@ body[data-theme="dark"] .profile-link:hover .profile-link-icon {
     max-width: 100%;
 
     text-align: left;
+  }
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+  max-width: var(--max);
+  margin: 40px auto 24px;
+  padding: 26px 14px;
+
+  display: grid;
+  grid-template-columns: minmax(560px, 1fr) minmax(460px, 500px);
+  column-gap: 8px;
+  align-items: center;
+
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.site-footer > div:first-child {
+  min-width: 0;
+}
+
+.site-footer > div:first-child p {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+/* Footer buttons container */
+
+.site-footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px 12px;
+
+  width: 100%;
+  max-width: 500px;
+
+  margin-left: auto;
+  margin-right: -8px;
+}
+
+/* Footer buttons */
+
+.site-footer .footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 10px 12px;
+
+  border-radius: 999px;
+  border: 1px solid var(--line);
+
+  background: var(--surface);
+  color: var(--text);
+
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 800;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    background-color .45s ease,
+    color .45s ease,
+    border-color .45s ease,
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+/* Footer icons */
+
+.site-footer .footer-icon {
+  width: 23px;
+  height: 23px;
+  min-width: 23px;
+
+  display: inline-grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: .68rem;
+  font-weight: 900;
+  line-height: 1;
+
+  transition:
+    background-color .45s ease,
+    color .45s ease,
+    transform .35s ease;
+}
+
+/* Brand-inspired footer icon colors */
+
+.site-footer .email-icon {
+  background: #47423c;
+}
+
+.site-footer .scholar-icon {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
+.site-footer .researchgate-icon {
+  background: #00ccbb;
+  color: #ffffff;
+}
+
+.site-footer .github-icon {
+  background: #24292f;
+  color: #ffffff;
+}
+
+.site-footer .linkedin-icon {
+  background: #0a66c2;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+}
+
+/* Hover behavior */
+
+.site-footer .footer-link:hover {
+  background: #47423c;
+  color: #fffaf0;
+  border-color: #47423c;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(52, 49, 45, .20);
+}
+
+.site-footer .footer-link:hover .footer-icon {
+  background: #fffaf0;
+  color: #47423c;
+
+  transform: scale(1.08);
+}
+
+/* Footer order:
+   Email, GitHub, LinkedIn, Scholar, ResearchGate
+*/
+
+/* .site-footer:not(.home-footer) .footer-link:nth-child(1) {
+  order: 1;
+}
+
+.site-footer:not(.home-footer) .footer-link:nth-child(4) {
+  order: 2;
+}
+
+.site-footer:not(.home-footer) .footer-link:nth-child(5) {
+  order: 3;
+}
+
+.site-footer:not(.home-footer) .footer-link:nth-child(2) {
+  order: 4;
+}
+
+.site-footer:not(.home-footer) .footer-link:nth-child(3) {
+  order: 5;
+} */
+
+/* Homepage footer credit */
+
+.home-footer {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.home-footer .footer-credit {
+  justify-self: end;
+
+  max-width: 360px;
+
+  color: var(--muted);
+
+  font-size: .84rem;
+  font-weight: 700;
+  line-height: 1.45;
+
+  text-align: right;
+}
+
+/* Dark mode */
+
+body[data-theme="dark"] .site-footer .footer-link {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+body[data-theme="dark"] .site-footer .footer-link:hover {
+  background: #e4c28a;
+  color: #242321;
+  border-color: #e4c28a;
+}
+
+body[data-theme="dark"] .site-footer .footer-link:hover .footer-icon {
+  background: #242321;
+  color: #fffaf0;
+}
+
+/* Responsive footer */
+
+@media (max-width: 1080px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    align-items: flex-start;
+  }
+
+  .site-footer .footer-links {
+    max-width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-footer .footer-credit {
+    justify-self: start;
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-footer {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
