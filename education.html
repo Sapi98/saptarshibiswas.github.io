@@ -68,6 +68,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Saptarshi Biswas home">
         <span class="brand-mark">
@@ -506,56 +509,108 @@
           <p class="eyebrow">Skills</p>
           <h2>Technical Expertise</h2>
         </div>
-        <div class="grid two">
-          <article class="tile">
-            <h3>
-              Programming Languages
-            </h3>
-            <p>
-              Python 3, C, Java, C++, MATLAB, HTML, CSS, JavaScript, jQuery, SQL
-            </p>
-          </article>
-          <article class="tile">
-            <h3>
-              Libraries
-            </h3>
-            <p>
-              NumPy, Matplotlib, PyTorch, Seaborn, Pandas, Scikit-learn, SHAP, XGBoost, Qiskit
-            </p>
-          </article>
-          <article class="tile">
-            <h3>
-              Software Design
-            </h3>
-            <p>
-              OOP, DBMS, Design Pattern
-            </p>
-          </article>
-          <article class="tile">
-            <h3>
-              Production Tools
-            </h3>
-            <p>
-              GitHub, Visual Studio Code, Cursor, LaTeX
-            </p>
-          </article>
-          <article class="tile">
-            <h3>
-              GIS Tools and Libraries
-            </h3>
-            <p>
-              GDAL, GRASS, SAGA, rasterio, shapely, QGIS, Geopandas, Remote Sensing, DEM, DTA
-            </p>
-          </article>
-          <article class="tile">
-            <h3>
-              Instruction Tools
-            </h3>
-            <p>
-              Canvas, Gradescope, Microsoft Suite, Google Classroom
-            </p>
-          </article>
-        </div>
+        <div class="grid three">
+        <article class="tile expertise-tile">
+          <div class="expertise-heading">
+            <span class="expertise-icon">💻</span>
+            <h3>Programming Languages</h3>
+          </div>
+
+          <div class="expertise-pills">
+            <span>Python</span>
+            <span>C</span>
+            <span>Java</span>
+            <span>C++</span>
+            <span>MATLAB</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>jQuery</span>
+            <span>SQL</span>
+          </div>
+        </article>
+
+        <article class="tile expertise-tile">
+          <div class="expertise-heading">
+            <span class="expertise-icon">📊</span>
+            <h3>Libraries & AI Tools</h3>
+          </div>
+
+          <div class="expertise-pills">
+            <span>NumPy</span>
+            <span>Matplotlib</span>
+            <span>PyTorch</span>
+            <span>Seaborn</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>SHAP</span>
+            <span>XGBoost</span>
+            <span>Qiskit</span>
+          </div>
+        </article>
+
+        <article class="tile expertise-tile">
+          <div class="expertise-heading">
+            <span class="expertise-icon">🧩</span>
+            <h3>Software Design</h3>
+          </div>
+
+          <div class="expertise-pills">
+            <span>Object-Oriented Programming</span>
+            <span>Database Management</span>
+            <span>Design Patterns</span>
+            <span>Software Architecture</span>
+          </div>
+        </article>
+
+        <article class="tile expertise-tile">
+          <div class="expertise-heading">
+            <span class="expertise-icon">🛠</span>
+            <h3>Production Tools</h3>
+          </div>
+
+          <div class="expertise-pills">
+            <span>GitHub</span>
+            <span>Visual Studio Code</span>
+            <span>Cursor</span>
+            <span>LaTeX</span>
+          </div>
+        </article>
+
+        <article class="tile expertise-tile">
+          <div class="expertise-heading">
+            <span class="expertise-icon">🛰</span>
+            <h3>GIS & Remote Sensing</h3>
+          </div>
+
+          <div class="expertise-pills">
+            <span>GDAL</span>
+            <span>GRASS</span>
+            <span>SAGA</span>
+            <span>Rasterio</span>
+            <span>Shapely</span>
+            <span>QGIS</span>
+            <span>GeoPandas</span>
+            <span>Remote Sensing</span>
+            <span>DEM</span>
+            <span>Digital Terrain Analysis</span>
+          </div>
+        </article>
+
+        <article class="tile expertise-tile">
+          <div class="expertise-heading">
+            <span class="expertise-icon">🎓</span>
+            <h3>Instructional Tools</h3>
+          </div>
+
+          <div class="expertise-pills">
+            <span>Canvas</span>
+            <span>Gradescope</span>
+            <span>Microsoft Suite</span>
+            <span>Google Classroom</span>
+          </div>
+        </article>
+      </div>
       </section>
       <section class="section reveal">
         <div class="subsection-heading">
