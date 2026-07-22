@@ -2521,64 +2521,66 @@ body[data-theme="dark"] .expertise-pills span:hover {
 /* Technical Expertise tiles */
 
 .expertise-tile {
-  display: fl*x;
+  display: flex;
   flex-direction: column;
-  gap* 18px;
+  gap: 18px;
 }
 
 .expertise-heading {
-  d*splay: flex;
-  align-items: center*
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
-.expertise-headin* h3 {
+.expertise-heading h3 {
   margin: 0;
 }
 
-.expertise-i*on {
+.expertise-icon {
   width: 40px;
-  height: 40px*
+  height: 40px;
   min-width: 40px;
 
-  display: in*ine-grid;
+  display: inline-grid;
   place-items: center;
 
-* border-radius: 14px;
+  border-radius: 14px;
 
-  backgroun*: #47423c;
+  background: #47423c;
   color: #fffaf0;
 
-  fo*t-size: 1.08rem;
+  font-size: 1.08rem;
 
   transition:
-  * background-color .45s ease,
-    c*lor .45s ease,
-    transform .35s *ase,
+    background-color .45s ease,
+    color .45s ease,
+    transform .35s ease,
     box-shadow .35s ease;
 }
 
-*expertise-pills {
-  display: flex;*  flex-wrap: wrap;
+.expertise-pills {
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
-*expertise-pills span {
-  display: *nline-flex;
-  align-items: center;*  gap: 7px;
+.expertise-pills > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
 
   min-height: 34px;
- *padding: 7px 11px;
+  padding: 7px 11px;
 
-  border-radiu*: 999px;
-  border: 1px solid var(-*line);
+  border-radius: 999px;
+  border: 1px solid var(--line);
 
-  background: var(--surfac*);
+  background: var(--surface);
   color: var(--text);
 
-  font-s*ze: .78rem;
+  font-size: .78rem;
   font-weight: 800;
-  *ine-height: 1;
+  line-height: 1;
 
   transition:
     background-color .45s ease,
@@ -2623,7 +2625,7 @@ body[data-theme="dark"] .expertise-pills span:hover {
     0 8px 18px rgba(0, 0, 0, .16);
 }
 
-.expertise-tile:hover .expertise-pills span {
+.expertise-tile:hover .expertise-pills > span {
   background: rgba(255, 250, 240, .16);
   color: #fffaf0;
   border-color: rgba(255, 250, 240, .28);
@@ -2636,7 +2638,7 @@ body[data-theme="dark"] .expertise-pills span:hover {
 
 /* Individual skill pill hover */
 
-.expertise-pills span:hover {
+.expertise-pills > span:hover {
   background: #d6b27f !important;
   color: #242321 !important;
   border-color: #d6b27f !important;
@@ -2647,7 +2649,7 @@ body[data-theme="dark"] .expertise-pills span:hover {
     0 8px 18px rgba(0, 0, 0, .18);
 }
 
-.expertise-pills span:hover .skill-icon {
+.expertise-pills > span:hover .skill-icon {
   background: #242321 !important;
   color: #fffaf0 !important;
 
@@ -2656,7 +2658,7 @@ body[data-theme="dark"] .expertise-pills span:hover {
 
 /* Dark mode */
 
-body[data-theme="dark"] .expertise-pills span {
+body[data-theme="dark"] .expertise-pills > span {
   background: var(--surface-2);
   color: var(--text);
   border-color: var(--line);
@@ -2667,7 +2669,7 @@ body[data-theme="dark"] .skill-icon {
   color: #242321;
 }
 
-body[data-theme="dark"] .expertise-tile:hover .expertise-pills span {
+body[data-theme="dark"] .expertise-tile:hover .expertise-pills > span {
   background: rgba(255, 250, 240, .14);
   color: #fffaf0;
   border-color: rgba(255, 250, 240, .24);
@@ -2678,13 +2680,13 @@ body[data-theme="dark"] .expertise-tile:hover .skill-icon {
   color: #fffaf0;
 }
 
-body[data-theme="dark"] .expertise-pills span:hover {
+body[data-theme="dark"] .expertise-pills > span:hover {
   background: #e4c28a !important;
   color: #242321 !important;
   border-color: #e4c28a !important;
 }
 
-body[data-theme="dark"] .expertise-pills span:hover .skill-icon {
+body[data-theme="dark"] .expertise-pills > span:hover .skill-icon {
   background: #242321 !important;
   color: #fffaf0 !important;
 }
