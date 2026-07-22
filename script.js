@@ -174,3 +174,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeFirstLine();
 });
+
+function updateScrollProgressBar() {
+  const progressBar = document.getElementById("scrollProgressBar");
+
+  if (!progressBar) return;
+
+  const scrollTop =
+    window.scrollY || document.documentElement.scrollTop;
+
+  const documentHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const progress =
+    documentHeight > 0 ? (scrollTop / documentHeight) * 100 : 0;
+
+  progressBar.style.width = `${progress}%`;
+}
+
+window.addEventListener("scroll", updateScrollProgressBar, {
+  passive: true
+});
+
+window.addEventListener("resize", updateScrollProgressBar);
+
+document.addEventListener("DOMContentLoaded", updateScrollProgressBar);
